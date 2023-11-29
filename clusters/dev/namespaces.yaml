@@ -4,6 +4,10 @@ metadata:
   name: namespaces
   namespace: test-home
 spec:
+  kubeConfig:
+    secretRef:
+      name: gitops-reconciler-kubeconfig
+      key: kubeconfig
   interval: 10m0s
   sourceRef:
     kind: GitRepository
