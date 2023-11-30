@@ -8,7 +8,6 @@ spec:
     secretRef:
       name: gitops-reconciler-kubeconfig
       key: kubeconfig
-  serviceAccountName: gitops-reconciler
   interval: 10m0s
   sourceRef:
     kind: GitRepository
