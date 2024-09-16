@@ -4,6 +4,11 @@ kind: Namespace
 metadata:
   name: new-hola
 ---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: new-hola2
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -29,21 +34,21 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple-webapp-blue
-  namespace: test-hola
+  name: simple-webapp-blue-2
+  namespace: new-hola2
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: simple-webapp-blue
+      app: simple-webapp-blue-2
   template:
     metadata:
       labels:
-        app: simple-webapp-blue
+        app: simple-webapp-blue-2
     spec:
       containers:
         - image: "ubuntu:jammy"
           command:
             - "sleep"
             - "604800"
-          name: simple-webapp-blue
+          name: simple-webapp-blue-2
