@@ -1,0 +1,18 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: test-hola
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: daniel-test-hola
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: test-daniel
+
