@@ -52,3 +52,47 @@ spec:
             - "sleep"
             - "604800"
           name: simple-webapp-blue-2
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-webapp-blue-2
+  namespace: new-home
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: simple-webapp-blue-2
+  template:
+    metadata:
+      labels:
+        app: simple-webapp-blue-2
+    spec:
+      containers:
+        - image: "ubuntu:jammy"
+          command:
+            - "sleep"
+            - "604800"
+          name: simple-webapp-blue-2
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-webapp-blue-2
+  namespace: new-home-ddddd
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: simple-webapp-blue-2
+  template:
+    metadata:
+      labels:
+        app: simple-webapp-blue-2
+    spec:
+      containers:
+        - image: "ubuntu:jammy"
+          command:
+            - "sleep"
+            - "604800"
+          name: simple-webapp-blue-2
