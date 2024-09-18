@@ -9,6 +9,12 @@ kind: Namespace
 metadata:
   name: new-hola2
 ---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: new-home-ddddd
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
