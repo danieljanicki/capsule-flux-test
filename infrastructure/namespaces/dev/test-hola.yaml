@@ -16,3 +16,25 @@ kind: Namespace
 metadata:
   name: test-daniel
 
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-webapp-blue
+  namespace: test-daniel
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: simple-webapp-blue
+  template:
+    metadata:
+      labels:
+        app: simple-webapp-blue
+    spec:
+      containers:
+        - image: "ubuntu:jammy"
+          command:
+            - "sleep"
+            - "604800"
+          name: simple-webapp-blue
