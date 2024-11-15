@@ -13,7 +13,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: simple-webapp-blue
-  namespace: daniel-new1
+  namespace: daniel-new11
 spec:
   replicas: 3
   selector:
