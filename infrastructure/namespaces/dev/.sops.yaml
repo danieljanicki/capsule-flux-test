@@ -1,0 +1,9 @@
+creation_rules:
+  - path_regex: notification-provider.*\.yaml$
+    encrypted_regex: ^address$
+    pgp: '4EDDF226EF71E1E46AE3D68B57FE7E1077799A44'
+  - path_regex: \.yaml$
+    encrypted_regex: ^(data|stringData)$
+    pgp: '4EDDF226EF71E1E46AE3D68B57FE7E1077799A44'
+  - path_regex: \.key$
+    pgp: '4EDDF226EF71E1E46AE3D68B57FE7E1077799A44'
